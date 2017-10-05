@@ -52,7 +52,7 @@ class NytBestsellers::CLI
   end
 
   def book_description(input)
-    book_list.each do |book|
+    Book.all.each do |book|
       if book.title == input
       puts #look at beginning of Avi video on big strings
       book.title
