@@ -1,3 +1,4 @@
+Testing 1-2-3
 Planning Out the Project:
 Goal: A command line interface that will list the books presented on the homepage of the NYT bestseller list.
 It will be able to list by genre (5 in all), list all books, list by author.
