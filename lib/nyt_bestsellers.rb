@@ -5,4 +5,6 @@ require_relative './nyt_bestsellers/cli'
 # end
 
 #This file requires all other files, bin/nyt_bestsellers will require this file, thus bin will run all files!
-#So below, we will be requiring the rest of the files needed for this program
+#So above, we will be requiring the rest of the files needed for this program
+
+#This is called encapsulation. Everything is run through NytBestsellers::CLI.new.call in bin/nyt-bestsellers
