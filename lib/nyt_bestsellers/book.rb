@@ -11,7 +11,7 @@ class NytBestsellers::Book
   end
 
   def scrape_homepage
-    html = open(https://www.nytimes.com/books/best-sellers/)
+    html = open('https://www.nytimes.com/books/best-sellers/')
     doc = Nokogiri::HTML(html)
   end
 
@@ -40,7 +40,7 @@ class NytBestsellers::Book
     end
   end
 
-  def
+  
   def self.all
     @@all
   end
