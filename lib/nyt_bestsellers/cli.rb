@@ -1,7 +1,13 @@
+require 'pry'
 class NytBestsellers::CLI
 
   def call
     puts "Welcome to the New York Times Bestsellers List!"
+    puts "How would you like to view these top books today? By:"
+    puts "Author"
+    puts "Genre"
+    puts "All Books"
+    puts "If you'd like to finish your search, type in 'Exit'."
     menu
     # puts input.upcase
   end
@@ -14,16 +20,20 @@ class NytBestsellers::CLI
   end
 
   def menu
-    puts "How would you like to view these top books today? By:"
-    puts "Author"
-    puts "Genre"
-    puts "All Books"
     input = gets.strip
     case input
     when "All Books"
+      list_books
     when "All books"
+      list_books
     when "all books"
       list_books
+    when "Exit"
+      nil
+    else
+      puts "That is an invalid option. Please type in 'Author', 'Genre', or 'All Books'."
+      puts "If you'd like to finish your search, type in 'Exit'."
+      menu
     end
   end
 
