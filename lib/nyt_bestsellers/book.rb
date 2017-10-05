@@ -1,5 +1,6 @@
 require 'pry'
-class NytBestsellers::Book
+# class NytBestsellers::Book
+  class Book
 
   attr_accessor :title, :author, :genre, :summary, :position
 
@@ -16,20 +17,25 @@ class NytBestsellers::Book
   end
 
   def title
-    scrape_homepage
     binding.pry
+    scrape_homepage
+    doc.css('div.book-body h3.title[itemprop="name"]').text
   end
 
   def author
+    doc.css('div.book-body p.author[itemprop="author"]').text
   end
 
-  def genre
+  def genre #There are 5 of these in different categories! Be warned.
+    doc.css('h2.subcategory-heading a.subcategory-heading-link').text
   end
 
   def summary
+    doc.css('div.book-body p[itemprop="name"].description').text
   end
 
-  def position
+  def standing
+    doc.css('div.book-body p.freshness').text
   end
 
   def book_list
@@ -40,7 +46,7 @@ class NytBestsellers::Book
     end
   end
 
-  
+
   def self.all
     @@all
   end

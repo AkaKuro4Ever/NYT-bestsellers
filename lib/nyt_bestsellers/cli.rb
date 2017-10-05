@@ -52,14 +52,14 @@ class NytBestsellers::CLI
   end
 
   def book_description(input)
-    Book.all.each do |book|
+    NytBestsellers::Book.all.each do |book|
       if book.title == input
       puts #look at beginning of Avi video on big strings
       book.title
       book.author
       book.genre
       book.summary
-      book.position
+      book.standing
       else
         "It seems the book you searched is not on the list. Please type in another book on the list"
         list_books
