@@ -25,15 +25,14 @@ class NytBestsellers::CLI
       when "Main Menu"
         call
       else
-
         book_description(input)
     end
   end
 
   def book_list
-    #Will list all books on homepage
+    #Will list all books on homepage in a numbered list :)
   end
-  
+
   def menu
     input = gets.strip
     case input
@@ -55,7 +54,19 @@ class NytBestsellers::CLI
   end
 
   def book_description(input)
-    puts "input"
+    list_books.each do |book|
+      if book.title == input
+      puts #look at beginning of Avi video on big strings
+      book.name
+      book.author
+      book.genre
+      book.description
+      book.position
+    else
+      "It seems the book you searched is not on the list. Please type in another book on the list"
+      book_list
+    end
+  end
     #must find a way to compare the input here. If it's not part of the list_books list, then it must return "This is not a valid book title. Please type in another" and then puts book_list again
     #Will compare the input to the list of all book titles from list_books
     #will pull that book's description out and list all of it
