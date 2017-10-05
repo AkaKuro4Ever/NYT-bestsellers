@@ -12,8 +12,6 @@ class NytBestsellers::CLI
     # puts input.upcase
   end
 
-
-
   def list_books
     #eventually will list all books
     #A list of all NYT books will be here
@@ -57,7 +55,7 @@ class NytBestsellers::CLI
     book_list.each do |book|
       if book.title == input
       puts #look at beginning of Avi video on big strings
-      book.name
+      book.title
       book.author
       book.genre
       book.summary
