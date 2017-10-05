@@ -54,21 +54,18 @@ class NytBestsellers::CLI
   end
 
   def book_description(input)
-    list_books.each do |book|
+    book_list.each do |book|
       if book.title == input
       puts #look at beginning of Avi video on big strings
       book.name
       book.author
       book.genre
-      book.description
+      book.summary
       book.position
-    else
-      "It seems the book you searched is not on the list. Please type in another book on the list"
-      book_list
+      else
+        "It seems the book you searched is not on the list. Please type in another book on the list"
+        list_books
+      end
     end
-  end
-    #must find a way to compare the input here. If it's not part of the list_books list, then it must return "This is not a valid book title. Please type in another" and then puts book_list again
-    #Will compare the input to the list of all book titles from list_books
-    #will pull that book's description out and list all of it
   end
 end
