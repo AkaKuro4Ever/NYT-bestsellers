@@ -6,7 +6,7 @@ class NytBestsellers::CLI
     puts "How would you like to view these top books today? By:"
     puts "Author"
     puts "Genre"
-    puts "All Books"
+    puts "View All Books"
     puts "If you'd like to finish your search, type in 'Exit'."
     menu
     # puts input.upcase
@@ -16,30 +16,48 @@ class NytBestsellers::CLI
 
   def list_books
     #eventually will list all books
-    puts "hi"
+    #A list of all NYT books will be here
+    book_list
+    puts "If you'd like to learn more about a specific book, please type in that book's title."
+    puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
+    input = gets.strip
+    case input
+      when "Main Menu"
+        call
+      else
+
+        book_description(input)
+    end
   end
 
+  def book_list
+    #Will list all books on homepage
+  end
+  
   def menu
     input = gets.strip
     case input
-    when "All Books"
+    when "View All Books"
       list_books
-    when "All books"
+    when "View All books"
       list_books
-    when "all books"
+    when "View all books"
+      list_books
+    when "view all books"
       list_books
     when "Exit"
       nil
     else
-      puts "That is an invalid option. Please type in 'Author', 'Genre', or 'All Books'."
+      puts "That is an invalid option. Please type in 'Author', 'Genre', or 'View All Books'."
       puts "If you'd like to finish your search, type in 'Exit'."
       menu
     end
   end
 
-  def book_description
-    puts "Please type the title of the book you'd like more information on."
-    input = gets.strip
-
+  def book_description(input)
+    puts "input"
+    #must find a way to compare the input here. If it's not part of the list_books list, then it must return "This is not a valid book title. Please type in another" and then puts book_list again
+    #Will compare the input to the list of all book titles from list_books
+    #will pull that book's description out and list all of it
   end
 end
