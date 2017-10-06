@@ -17,14 +17,9 @@ class Book
   @@all = [] #array of all Book instances
 
   def initialize(genre)
-    #  student_hash.each {|key, value| self.send(("#{key}="), value)}
     @genre = genre
     genre.books << self
     @@all << self
-  end
-
-  def find_or_create_by_name(name)
-    self.find_by_name(name)||self.create(name)
   end
 
   def self.create_from_scraper(book)

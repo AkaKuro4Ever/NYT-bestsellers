@@ -8,7 +8,25 @@ Then, the user will be able to go back to choose a new book or new category to l
 
 Notes and Thoughts Throughout Coding Process
 
+genre.rb Notes:
+
+  # - [ ]When a book is instantiated, if the genre is NEW, it creates a new genre.
+  # - [ ] If the book has a genre that already exists, it needs to add that book to the genre list.
+  # - [ ] It should be able to call all books in that specific genre
+  # - [ ] It needs to be able to return the list of books in a specific genre instance
+
 scraper.rb Notes:
+
+  #Our scraper is going to be much like the music_importer.rb for the Music CLI lab.
+  #By inserting a method from another file into this one, we can give THAT method an argument when we provide it in the first method that is enclosing it. That is how we connect the two files and connect the initial scraping with the class.
+
+  #Example from Music CLI Lab:
+
+  # def import
+  #   self.files.each do |filename|
+  #     Song.create_from_filename(filename)
+  #   end
+  # end
 
   #homepage_iteration
   To grab all the books, we'll have to first iterate through each of the 5 genres and instantiate the books in each genre. This is the scraping address of the first genre's section.
