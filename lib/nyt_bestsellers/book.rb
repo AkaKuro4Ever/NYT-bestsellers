@@ -35,23 +35,8 @@ class Book
     #To grab all the books, we'll have to first iterate through each of the 5 genres and instantiate the books in each genre. This is the scraping address of the first genre's section.
     scrape_homepage
 
-#This is how the restaurant connected their scraping and their instantiation:
-# def self.new_from_index_page(r)
-#   self.new(
-#     r.css("h2").text,
-#     "http://www.theworlds50best.com#{r.css("a").attribute("href").text}",
-#     r.css("h3").text,
-#     r.css(".position").text
-#     )
-# end
-#
-# def initialize(name=nil, url=nil, location=nil, position=nil)
-#   @name = name
-#   @url = url
-#   @location = location
-#   @position = position
-#   @@all << self
-# end
+#We could also make an array in the iteration and then put that iteration into the initialize method - this is what was done in student_scraper lab and music library CLI - we create from!
+
 
     doc.css('section.subcategory').each do |collection|
       collection.each do |book| do
