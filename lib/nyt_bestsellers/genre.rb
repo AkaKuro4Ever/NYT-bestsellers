@@ -5,6 +5,8 @@
 
 class NytBestsellers::Genre
 
+extend Findable
+
 attr_accessor :name
 
 @@all = []

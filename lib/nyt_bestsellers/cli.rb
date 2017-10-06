@@ -86,7 +86,12 @@ class NytBestsellers::CLI
     NytBestsellers::Genre.all.each do |genre|
       if genre.name == input
         puts #look at beginning of Avi video on big strings
-        
+        genre.songs
+      else
+        "It seems the genre you searched is not on the list. Please type in another genre on the list"
+        list_genres
+      end
+    end
   end
 
   def book_description(input)
