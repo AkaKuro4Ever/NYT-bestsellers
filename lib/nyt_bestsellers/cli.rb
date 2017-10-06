@@ -1,7 +1,10 @@
 require 'pry'
 class NytBestsellers::CLI
 
+#at the end, must add in fancy stuff to make it look good! Look at student_scraper lab for help
+
   def call
+    puts "Main Menu"
     puts "Welcome to the New York Times Bestsellers List!"
     puts "How would you like to view these top books today?"
     puts "By 'Genre' or 'View All Books'?"
@@ -58,8 +61,7 @@ class NytBestsellers::CLI
   def genre_lists_books(input)
     NytBestsellers::Genre.all.each do |genre|
       if genre.name == input
-        puts #look at beginning of Avi video on big strings
-        genre.books
+      list_genres_books
       else
         "It seems the genre you searched is not on the list. Please type in another genre on the list"
         list_genres
