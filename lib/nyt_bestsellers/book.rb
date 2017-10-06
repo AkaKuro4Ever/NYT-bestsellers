@@ -26,11 +26,6 @@ class Book
     self.find_by_name(name)||self.create(name)
   end
 
-  def scrape_homepage
-    html = open('https://www.nytimes.com/books/best-sellers/')
-    doc = Nokogiri::HTML(html)
-  end
-
   def book_list
     counter = 0
     self.all.collect do |book|
