@@ -62,12 +62,12 @@ class NytBestsellers::CLI
     NytBestsellers::Genre.all.each do |genre|
       if genre.name == input
       list_genres_books
+      ask_about_book
       else
         "It seems the genre you searched is not on the list. Please type in another genre on the list"
         list_genres
       end
     end
-    ask_about_book
   end
 
   def ask_about_book
@@ -88,12 +88,13 @@ class NytBestsellers::CLI
   def book_description(input)
     NytBestsellers::Book.all.each do |book|
       if book.title == input
-      puts #look at beginning of Avi video on big strings
+      puts <<eos
       book.title
       book.author
       book.genre
       book.summary
       book.standing
+      eos
       else
         "It seems the book you searched is not on the list. Please type in another book on the list"
         list_books
