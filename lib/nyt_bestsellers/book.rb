@@ -3,7 +3,7 @@ class NytBestsellers::Book
 
 extend NytBestsellers::Findable
 
-attr_accessor :title, :author, :genre, :summary, :position
+attr_accessor :title, :author, :genre, :summary, :standing
 
 @@all = [] #array of all Book instances
 
@@ -14,14 +14,13 @@ attr_accessor :title, :author, :genre, :summary, :position
   end
 
   def self.create_from_scraper(book)
-    book = self.new(NytBestsellers::Genre.find_or_create_by_name(book.css('h2.subcategory-heading a.subcategory-heading-link').text))
-    book.title = book
-    binding.pry
+    book_instance = self.new(NytBestsellers::Genre.find_or_create_by_name(book.css('h2.subcategory-heading a.subcategory-heading-link').text))
+    book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
     # book.genre = NytBestsellers::Genre.find_or_create_by_name(doc.css('h2.subcategory-heading a.subcategory-heading-link').text)
     #IF the genre doesn't exist yet, we have to make it exist
-    book.author = book.css('div.book-body p.author[itemprop="author"]').text
-    book.summary = book.css('div.book-body p[itemprop="name"].description').text
-    book.standing = book.css('div.book-body p.freshness').text
+    book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
+    book_instance.summary = book.css('div.book-body p[itemprop="name"].description').text
+    book_instance.standing = book.css('div.book-body p.freshness').text
   end
 
   def self.all

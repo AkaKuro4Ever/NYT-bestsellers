@@ -11,7 +11,7 @@ attr_accessor :name
     @books = []
   end
 
-  def self.create
+  def self.create(name)
     genre = NytBestsellers::Genre.new(name)
     @@all << genre
     genre

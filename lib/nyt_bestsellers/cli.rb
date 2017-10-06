@@ -5,7 +5,7 @@ class NytBestsellers::CLI
 #at the end, must add in fancy stuff to make it look good! Look at student_scraper lab for help
 
   def call
-    binding.pry
+    NytBestsellers::Scraper.new.homepage_iteration
     puts "Main Menu"
     puts "Welcome to the New York Times Bestsellers List!"
     puts "How would you like to view these top books today?"
@@ -29,7 +29,7 @@ class NytBestsellers::CLI
     when "Genre"
       ask_about_genre
     when "Exit"
-      nil
+      exit
     else
       puts "That is an invalid option. Please type in 'Genre' or 'View All Books'."
       puts "If you'd like to finish your search, type in 'Exit'."
@@ -54,7 +54,7 @@ class NytBestsellers::CLI
       when "Main Menu"
         call
       when "Exit"
-        nil
+        exit
       else
         genre_lists_books(input)
     end
@@ -81,7 +81,7 @@ class NytBestsellers::CLI
       when "Main Menu"
         call
       when "Exit"
-        nil
+        exit
       else
         book_description(input)
     end
