@@ -3,6 +3,8 @@
 
 class NytBestsellers::Genre
 
+attr_accessor :name
+
 @@all = []
 
   def initialize
@@ -10,5 +12,15 @@ class NytBestsellers::Genre
 
   def self.all
     @@all
+  end
+
+  def list_genres
+    #Does this go here or on the genre.rb page?!
+    counter = 0
+    self.all.collect do |genre|
+      counter +=1
+      puts "#{counter}. #{genre.name}"
+    end
+    #it will compare the input to the genre.name and produce that genre's books
   end
 end

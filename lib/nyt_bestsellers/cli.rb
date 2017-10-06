@@ -28,6 +28,7 @@ class NytBestsellers::CLI
 
   def book_list
     #Will list all books on homepage in a numbered list :)
+    #Does this go here or on the book.rb page??
   end
 
   def menu
@@ -42,20 +43,28 @@ class NytBestsellers::CLI
     when "view all books"
       list_books
     when "Genre"
-      list_genres
+      ask_about_genre
     when "Exit"
       nil
     else
-      puts "That is an invalid option. Please type in 'Author', 'Genre', or 'View All Books'."
+      puts "That is an invalid option. Please type in 'Genre' or 'View All Books'."
       puts "If you'd like to finish your search, type in 'Exit'."
       menu
     end
   end
 
-  def list_genres
-    #this will give a numbered list of genres and ask which genre they want to search through
-    #it will compare the input to the genre.name and produce that genre's books
-    ask_about_book
+  def ask_about_genre
+    list_genres
+    puts "Which genre would you like to search through?"
+    puts "If you'd like to end your search, type in 'Exit'"
+    input = gets.strip
+    case input
+    when "Exit"
+      nil
+    when ""
+    end
+  ask_about_book
+
   end
 
   def ask_about_book
