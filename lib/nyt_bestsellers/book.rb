@@ -19,7 +19,7 @@ attr_accessor :title, :author, :genre, :summary, :standing
     # book.genre = NytBestsellers::Genre.find_or_create_by_name(doc.css('h2.subcategory-heading a.subcategory-heading-link').text)
     #IF the genre doesn't exist yet, we have to make it exist
     book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
-    book_instance.summary = book.css('div.book-body p[itemprop="name"].description').text
+    book_instance.summary = book.css('div.book-body p[itemprop="description"].description').text
     book_instance.standing = book.css('div.book-body p.freshness').text
   end
 
