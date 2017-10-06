@@ -30,12 +30,20 @@ require 'pry'
     doc.css('div.book-body h3.title[itemprop="name"]').text
   end
 
-  def author
-    doc.css('div.book-body p.author[itemprop="author"]').text
+  def genre_1
+    #To grab all the books, we'll have to first iterate through each of the 5 genres and instantiate the books in each genre. This is the scraping address of the first genre's section.
+    doc.css('section.subcategory').each do |collection|
+      self.title = collection.css('div.book-body h3.title[itemprop="name"]').text
+      self.genre = doc.css('h2.subcategory-heading a.subcategory-heading-link').text
+      self.author = collection.css('div.book-body p.author[itemprop="author"]').text
+      self.summary = collection.css('div.book-body p[itemprop="name"].description').text
+      self.standing.css('div.book-body p.freshness').text
+
+    end
   end
 
-  def genre #There are 5 of these in different categories! Be warned.
-    doc.css('h2.subcategory-heading a.subcategory-heading-link').text
+  def author
+    doc.css('div.book-body p.author[itemprop="author"]').text
   end
 
   def summary
