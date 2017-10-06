@@ -21,10 +21,19 @@ attr_accessor :title, :author, :genre, :summary, :standing
     book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
     book_instance.summary = book.css('div.book-body p[itemprop="description"].description').text
     book_instance.standing = book.css('div.book-body p.freshness').text
+    self.summary
   end
 
   def self.all
     @@all
+  end
+
+  def self.summary
+    self.all.each do |book|
+      if book.summary == ""
+        book.summary = "Not Applicable"
+      end
+    end
   end
 
   def self.book_list

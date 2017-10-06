@@ -33,7 +33,7 @@ attr_accessor :name
     end
   end
 
-  def list_genres
+  def self.list_genres
     counter = 0
     self.all.collect do |genre|
       counter +=1

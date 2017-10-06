@@ -6,6 +6,7 @@ class NytBestsellers::CLI
 
   def call
     NytBestsellers::Scraper.new.homepage_iteration
+    # binding.pry
     puts "Main Menu"
     puts "Welcome to the New York Times Bestsellers List!"
     puts "How would you like to view these top books today?"
@@ -45,7 +46,7 @@ class NytBestsellers::CLI
   end
 
   def ask_about_genre
-    list_genres
+    NytBestsellers::Genre.list_genres
     puts "Which genre would you like to search through?"
     puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
     puts "If you'd like to finish your search, type in 'Exit'."
@@ -90,7 +91,7 @@ class NytBestsellers::CLI
   def check_book(input)
     counter = 0
     NytBestsellers::Book.all.each do |book|
-      until book.title == input
+      if book.title != input
         counter += 1
       end
     end
@@ -108,7 +109,7 @@ class NytBestsellers::CLI
       puts <<-HEREDOC
       #{book.title}
       #{book.author}
-      #{book.genre}
+      #{book.genre.name}
       Summary: #{book.summary}
       Weeks On The List: #{book.standing}
       HEREDOC
