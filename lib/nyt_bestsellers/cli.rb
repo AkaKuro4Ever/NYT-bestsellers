@@ -83,11 +83,11 @@ class NytBestsellers::CLI
       when "Exit"
         exit
       else
-        book_description(input)
+        check_book(input)
     end
   end
 
-  def check_book
+  def check_book(input)
     counter = 0
     NytBestsellers::Book.all.each do |book|
       until book.title == input
@@ -127,6 +127,7 @@ class NytBestsellers::CLI
       exit
     else
       puts "Sorry, I didn't understand that."
-      another_book
+      list_books
+    end
   end
 end
