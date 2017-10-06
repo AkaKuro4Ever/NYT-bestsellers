@@ -8,6 +8,7 @@
 #     Song.create_from_filename(filename)
 #   end
 # end
+class Scraper
   def scrape_homepage
     html = open('https://www.nytimes.com/books/best-sellers/')
     doc = Nokogiri::HTML(html)
@@ -20,15 +21,5 @@
         Book.create_from_scraper(book)
       end
     end
-  end
-
-  def self.create_from_scraper(book)
-    book = self.new
-    book.title = collection.css('div.book-body h3.title[itemprop="name"]').text
-    book.genre = doc.css('h2.subcategory-heading a.subcategory-heading-link').text
-    #IF the genre doesn't exist yet, we have to make it exist
-    book.author = collection.css('div.book-body p.author[itemprop="author"]').text
-    book.summary = collection.css('div.book-body p[itemprop="name"].description').text
-    book.standing = collection.css('div.book-body p.freshness').text
   end
 end
