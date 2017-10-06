@@ -6,9 +6,10 @@ class Scraper
 
   def homepage_iteration
     scrape_homepage
-    doc.css('section.subcategory').each do |collection|
+    doc.css('ol.book-menu').each do |collection|
       collection.each do |book| do
-        NytBestsellers::Book.create_from_scraper(book)
+        NytBestsellers::Book.create_from_scraper(book.css('div.book-body h3.title[itemprop="name"]').text)
+        #Currently, book == ALL of the CSS in a single book class - which is a LOT. We just want book === book.name
       end
     end
   end
