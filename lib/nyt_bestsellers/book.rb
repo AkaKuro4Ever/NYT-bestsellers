@@ -1,7 +1,7 @@
 require 'pry'
 class NytBestsellers::Book
 
-extend Findable
+extend NytBestsellers::Findable
 
 attr_accessor :title, :author, :genre, :summary, :position
 

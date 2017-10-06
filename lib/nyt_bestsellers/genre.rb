@@ -1,6 +1,6 @@
 class NytBestsellers::Genre
 
-extend Findable
+extend NytBestsellers::Findable
 
 attr_accessor :name
 
