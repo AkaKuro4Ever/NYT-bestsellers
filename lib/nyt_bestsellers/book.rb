@@ -37,21 +37,9 @@ require 'pry'
       self.genre = doc.css('h2.subcategory-heading a.subcategory-heading-link').text
       self.author = collection.css('div.book-body p.author[itemprop="author"]').text
       self.summary = collection.css('div.book-body p[itemprop="name"].description').text
-      self.standing.css('div.book-body p.freshness').text
+      self.standing = collection.css('div.book-body p.freshness').text
 
     end
-  end
-
-  def author
-    doc.css('div.book-body p.author[itemprop="author"]').text
-  end
-
-  def summary
-    doc.css('div.book-body p[itemprop="name"].description').text
-  end
-
-  def standing
-    doc.css('div.book-body p.freshness').text
   end
 
   def book_list
