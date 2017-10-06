@@ -29,7 +29,7 @@ attr_accessor :name
     counter = 0
     self.books.collect do |book|
       counter +=1
-      puts "#{counter}. #{book.name}"
+      puts "#{counter}. #{book.title}"
     end
   end
 
