@@ -8,6 +8,17 @@ Then, the user will be able to go back to choose a new book or new category to l
 
 Notes and Thoughts Throughout Coding Process
 
+book.rb Notes:
+
+  # Book class needs to:
+  # - [ ] Instantiate
+  # - [X] @@all array with every instance of books
+  # - [X] book_list: Method that will iterate through @@all array and give a list of titles
+  # - [X]Assign each of the attributes to the scraped designation
+  # - [X] Be able to call all of the attributes at will
+  # - [X] Will need to have a genre class as well in order to link genres (this is necessary because the books will be linked through genre first due to its placement on the site)
+  # - [] Must link to the genre class and instantiate genre
+
 genre.rb Notes:
 
   # - [ ]When a book is instantiated, if the genre is NEW, it creates a new genre.

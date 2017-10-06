@@ -26,7 +26,6 @@ attr_accessor :name
   end
 
   def list_genres
-    #Does this go here or on the genre.rb page?!
     counter = 0
     self.all.collect do |genre|
       counter +=1
