@@ -16,6 +16,7 @@ attr_accessor :title, :author, :genre, :summary, :position
   def self.create_from_scraper(book)
     book = self.new(NytBestsellers::Genre.find_or_create_by_name(book.css('h2.subcategory-heading a.subcategory-heading-link').text))
     book.title = book
+    binding.pry
     # book.genre = NytBestsellers::Genre.find_or_create_by_name(doc.css('h2.subcategory-heading a.subcategory-heading-link').text)
     #IF the genre doesn't exist yet, we have to make it exist
     book.author = book.css('div.book-body p.author[itemprop="author"]').text
@@ -27,7 +28,7 @@ attr_accessor :title, :author, :genre, :summary, :position
     @@all
   end
 
-  def book_list
+  def self.book_list
     counter = 0
     self.all.collect do |book|
       counter +=1

@@ -1,13 +1,15 @@
 require_relative "./nyt_bestsellers/version"
 require_relative './nyt_bestsellers/cli'
+require_relative './nyt_bestsellers/findable'
+require_relative './nyt_bestsellers/scraper'
 require_relative './nyt_bestsellers/book'
 require_relative './nyt_bestsellers/genre'
-require_relative './nyt_bestsellers/scraper'
-require_relative './nyt_bestsellers/findable'
+require 'nokogiri'
 # module NytBestsellers
 #   # Your code goes here...
 # end
-
+# pry.start
+#pry here b/c it's where loading all the files
 #bin/nyt_bestsellers is the execution point - it's the file people are running
   #Anything that needs the environment will load it through bin/nyt_bestsellers in the terminal
   #'NytBestsellers::CLI.new.call' is creating a new instance of the controller CLI and calls the #call method on it. #Call starts the domino effect through the whole CLI page.

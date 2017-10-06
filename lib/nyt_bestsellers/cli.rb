@@ -1,9 +1,11 @@
 require 'pry'
+require 'nokogiri'
 class NytBestsellers::CLI
 
 #at the end, must add in fancy stuff to make it look good! Look at student_scraper lab for help
 
   def call
+    binding.pry
     puts "Main Menu"
     puts "Welcome to the New York Times Bestsellers List!"
     puts "How would you like to view these top books today?"
@@ -38,7 +40,7 @@ class NytBestsellers::CLI
   def list_books
     #eventually will list all books
     #A list of all NYT books will be here
-    book_list
+    NytBestsellers::Book.book_list
     ask_about_book
   end
 
