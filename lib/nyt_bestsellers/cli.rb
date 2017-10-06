@@ -87,21 +87,46 @@ class NytBestsellers::CLI
     end
   end
 
+  def check_book
+    counter = 0
+    NytBestsellers::Book.all.each do |book|
+      until book.title == input
+        counter += 1
+      end
+    end
+    if counter == 25
+      puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+      list_books
+    else
+      book_description(input)
+    end
+  end
+
   def book_description(input)
-    binding.pry
     NytBestsellers::Book.all.each do |book|
       if book.title == input
       puts <<-HEREDOC
       #{book.title}
       #{book.author}
       #{book.genre}
-      #{book.summary}
-      #{book.standing}
+      Summary: #{book.summary}
+      Weeks On The List: #{book.standing}
       HEREDOC
-      else
-        puts "It seems the book you searched is not on the list. Please type in another book on the list:"
-        list_books
+      another_book
       end
     end
+  end
+
+  def another_book
+    puts "Would you like to learn about another book? Type 'Yes' or 'No'."
+    input = gets.strip
+    case input
+    when "Yes"
+      ask_about_book
+    when "No"
+      exit
+    else
+      puts "Sorry, I didn't understand that."
+      another_book
   end
 end
