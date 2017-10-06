@@ -56,12 +56,15 @@ class NytBestsellers::CLI
   def ask_about_genre
     list_genres
     puts "Which genre would you like to search through?"
-    puts "If you'd like to end your search, type in 'Exit'"
+    puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
     input = gets.strip
     case input
+      when "Main Menu"
+        call
     when "Exit"
       nil
-    when ""
+    else
+      genre_lists_books
     end
   ask_about_book
 
@@ -77,6 +80,13 @@ class NytBestsellers::CLI
       else
         book_description(input)
     end
+  end
+
+  def genre_lists_books(input)
+    NytBestsellers::Genre.all.each do |genre|
+      if genre.name == input
+        puts #look at beginning of Avi video on big strings
+        
   end
 
   def book_description(input)
