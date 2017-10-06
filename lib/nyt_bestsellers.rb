@@ -1,6 +1,7 @@
 require_relative "./nyt_bestsellers/version"
 require_relative './nyt_bestsellers/cli'
 require_relative './nyt_bestsellers/book'
+require_relative './nyt_bestsellers/genre'
 # module NytBestsellers
 #   # Your code goes here...
 # end

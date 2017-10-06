@@ -2,13 +2,21 @@ require 'pry'
 # class NytBestsellers::Book
   class Book
 
+# Book class needs to:
+# - [ ] Instantiate
+# - [X] @@all array with every instance of books
+# - [X] book_list: Method that will iterate through @@all array and give a list of titles
+# - [ ]Assign each of the attributes to the scraped designation
+# - [X] Be able to call all of the attributes at will
+# - Will need to have a genre class as well in order to link genres (this is necessary because the books will be linked through genre first due to its placement on the site)
+
   attr_accessor :title, :author, :genre, :summary, :position
 
   @@all = [] #array of all Book instances
 
   def initialize
     #  student_hash.each {|key, value| self.send(("#{key}="), value)}
-    # @@all << self
+    @@all << self
   end
 
   def scrape_homepage
