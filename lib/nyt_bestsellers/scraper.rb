@@ -1,4 +1,4 @@
-class Scraper
+class NytBestsellers::Scraper
   def scrape_homepage
     html = open('https://www.nytimes.com/books/best-sellers/')
     doc = Nokogiri::HTML(html)

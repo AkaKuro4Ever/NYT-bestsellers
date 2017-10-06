@@ -88,13 +88,13 @@ class NytBestsellers::CLI
   def book_description(input)
     NytBestsellers::Book.all.each do |book|
       if book.title == input
-      puts <<eos
+      puts <<-HEREDOC
       book.title
       book.author
       book.genre
       book.summary
       book.standing
-      eos
+      HEREDOC
       else
         "It seems the book you searched is not on the list. Please type in another book on the list"
         list_books
