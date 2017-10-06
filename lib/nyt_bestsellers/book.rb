@@ -34,12 +34,36 @@ class Book
   def genre_1
     #To grab all the books, we'll have to first iterate through each of the 5 genres and instantiate the books in each genre. This is the scraping address of the first genre's section.
     scrape_homepage
+
+#This is how the restaurant connected their scraping and their instantiation:
+# def self.new_from_index_page(r)
+#   self.new(
+#     r.css("h2").text,
+#     "http://www.theworlds50best.com#{r.css("a").attribute("href").text}",
+#     r.css("h3").text,
+#     r.css(".position").text
+#     )
+# end
+#
+# def initialize(name=nil, url=nil, location=nil, position=nil)
+#   @name = name
+#   @url = url
+#   @location = location
+#   @position = position
+#   @@all << self
+# end
+
     doc.css('section.subcategory').each do |collection|
-      self.title = collection.css('div.book-body h3.title[itemprop="name"]').text
-      self.genre = doc.css('h2.subcategory-heading a.subcategory-heading-link').text
-      self.author = collection.css('div.book-body p.author[itemprop="author"]').text
-      self.summary = collection.css('div.book-body p[itemprop="name"].description').text
-      self.standing = collection.css('div.book-body p.freshness').text
+      collection.each do |book| do
+        #This is WRONG - if we're giving attributes, we need to know which instance we're giving attributes to.
+        #Each of these are not instantiated. First, we must iterate and instantiate each one
+        book.title = collection.css('div.book-body h3.title[itemprop="name"]').text
+        book.genre = doc.css('h2.subcategory-heading a.subcategory-heading-link').text
+        #IF the genre doesn't exist yet, we have to make it exist
+        book.author = collection.css('div.book-body p.author[itemprop="author"]').text
+        book.summary = collection.css('div.book-body p[itemprop="name"].description').text
+        book.standing = collection.css('div.book-body p.freshness').text
+      end
     end
   end
 
