@@ -16,7 +16,11 @@ attr_accessor :name
     @songs = []
   end
 
-
+  def self.create
+    genre = NytBestsellers::Genre.new(NytBestsellers::Song.genre)
+    @@all << genre
+    genre
+  end
 
   def songs
     @songs
