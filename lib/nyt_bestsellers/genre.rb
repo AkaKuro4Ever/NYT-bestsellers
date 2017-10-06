@@ -13,17 +13,17 @@ attr_accessor :name
 
   def initialize(name)
     @name = name #This name will need to be scraped from the web page
-    @songs = []
+    @books = []
   end
 
   def self.create
-    genre = NytBestsellers::Genre.new(NytBestsellers::Song.genre)
+    genre = NytBestsellers::Genre.new(name)
     @@all << genre
     genre
   end
 
-  def songs
-    @songs
+  def books
+    @books
   end
 
   def self.all

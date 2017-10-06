@@ -18,7 +18,7 @@ class Scraper
     scrape_homepage
     doc.css('section.subcategory').each do |collection|
       collection.each do |book| do
-        Book.create_from_scraper(book)
+        NytBestsellers::Book.create_from_scraper(book)
       end
     end
   end

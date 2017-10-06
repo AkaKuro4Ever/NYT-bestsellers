@@ -16,8 +16,10 @@ class Book
 
   @@all = [] #array of all Book instances
 
-  def initialize
+  def initialize(genre)
     #  student_hash.each {|key, value| self.send(("#{key}="), value)}
+    @genre = genre
+    genre.books << self
     @@all << self
   end
 
@@ -26,9 +28,9 @@ class Book
   end
 
   def self.create_from_scraper(book)
-    book = self.new
+    book = self.new(NytBestsellers::Genre.find_or_create_by_name(doc.css('h2.subcategory-heading a.subcategory-heading-link').text))
     book.title = collection.css('div.book-body h3.title[itemprop="name"]').text
-    book.genre = doc.css('h2.subcategory-heading a.subcategory-heading-link').text
+    # book.genre = NytBestsellers::Genre.find_or_create_by_name(doc.css('h2.subcategory-heading a.subcategory-heading-link').text)
     #IF the genre doesn't exist yet, we have to make it exist
     book.author = collection.css('div.book-body p.author[itemprop="author"]').text
     book.summary = collection.css('div.book-body p[itemprop="name"].description').text
