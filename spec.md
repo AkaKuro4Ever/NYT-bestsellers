@@ -11,12 +11,17 @@ Specs:
   #check_book - If given an input, it checks if it's a legitimate title
   #book_description - It gives the specific book information
   #another_book - a method to ask the user if they'd like to search more books
-  #ask_about_book - A method passed in other methods to 
+  #list_genres - listing all genres on NYT homepage
+  #ask_about_genre - input to select a genre to peruse
+  #check_genre - to check input to see if it's a valid genre name
+  #genre_lists_books - to list all books in genre and revert them to input for specific book info
 
   Things that I did NOT get to do, but would've liked to with more time:
 
-  1. If they had seached through genre and wanted to search another book, it would've sent them back to the Genre menu, not shown them the whole book list
+  1. If they had searched through genre and wanted to search another book, it would've sent them back to the Genre menu, not shown them the whole book list
   2. Colorize the CLI for clarity
 
 - [X] Pull data from an external source
+
+
 - [X] Implement both list and detail views
