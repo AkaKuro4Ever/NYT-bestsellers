@@ -77,26 +77,6 @@ class NytBestsellers::CLI
     end
   end
 
-
-  # def check_book(input)
-  #   counter = 0
-  #   NytBestsellers::Book.all.each do |book|
-  #     if book.title != input
-  #       book_description(input)
-  #     else
-  #       puts "It seems the book you searched is not on the list. Please type in another book on the list:"
-  #       list_books
-  #     end
-    # end
-    # if counter == 25
-    #   puts "It seems the book you searched is not on the list. Please type in another book on the list:"
-    #   list_books
-    # else
-    #   book_description(input)
-      #THIS IS BREAKING BECAUSE OF THE COUNTER BEING WRONG?
-  #   end
-  # end
-
   def book_description(input)
     NytBestsellers::Book.all.each do |book|
       if book.title == input
@@ -155,36 +135,6 @@ class NytBestsellers::CLI
       book_description(input)
     end
   end
-  #
-  # def book_description(input)
-  #   NytBestsellers::Book.all.each do |book|
-  #     case input
-  #     when book.title == input
-  #     puts <<-HEREDOC
-  #     #{book.title}
-  #     #{book.author}
-  #     #{book.genre.name}
-  #     Summary: #{book.summary}
-  #     Weeks On The List: #{book.standing}
-  #     HEREDOC
-  #     another_book
-  #     end
-  #   end
-  # end
-  #
-  # def another_book
-  #   puts "Would you like to learn about another book? Type 'Yes' or 'No'."
-  #   input = gets.strip
-  #   case input
-  #   when "Yes"
-  #     list_books
-  #   when "No"
-  #     exit
-  #   else
-  #     puts "Sorry, I didn't understand that."
-  #     list_books
-  #   end
-  # end
 
   def list_genres
     counter = 0
