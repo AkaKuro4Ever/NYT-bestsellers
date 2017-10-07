@@ -172,7 +172,7 @@ class NytBestsellers::CLI
   end
 
   def ask_about_genre
-    NytBestsellers::Genre.list_genres
+    list_genres
     puts "Which genre would you like to search through?"
     puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
     puts "If you'd like to finish your search, type in 'Exit'."
@@ -190,23 +190,22 @@ class NytBestsellers::CLI
   def check_genre(input)
     counter = 0
     NytBestsellers::Genre.all.each do |genre|
-      if book.title != input
+      if genre.name != input
         counter += 1
       end
     end
     if counter == 5
       puts "It seems the genre you searched is not on the list. Please type in another genre on the list:"
-      list_genres
+      ask_about_genre
     else
       genre_lists_books(input)
     end
   end
 
   def genre_lists_books(input)
-    binding.pry
     NytBestsellers::Genre.all.each do |genre|
       if genre.name == input
-      NytBestsellers::Genre.list_genres_books
+      genre.list_genres_books
       ask_about_book
       end
     end
