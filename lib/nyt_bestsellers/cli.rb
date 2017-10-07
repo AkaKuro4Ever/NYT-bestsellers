@@ -106,21 +106,6 @@ class NytBestsellers::CLI
     end
   end
 
-  def ask_about_book
-    puts "If you'd like to learn more about a specific book, please type in that book's title."
-    puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
-    puts "If you'd like to finish your search, type in 'Exit'."
-    input = gets.strip
-    case input
-      when "Main Menu"
-        call
-      when "Exit"
-        exit
-      else
-        check_book(input)
-    end
-  end
-
   def check_book(input)
     counter = 0
     NytBestsellers::Book.all.each do |book|
