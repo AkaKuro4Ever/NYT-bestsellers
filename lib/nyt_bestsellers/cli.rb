@@ -69,7 +69,7 @@ class NytBestsellers::CLI
         counter += 1
       end
     end
-    if counter == 25
+    if counter == NytBestsellers::Book.all.count
       puts "It seems the book you searched is not on the list. Please type in another book on the list:"
       list_books
     else
