@@ -25,7 +25,7 @@ attr_accessor :name
     @@all
   end
 
-  def list_genres_books
+  def self.list_genres_books
     counter = 0
     self.books.collect do |book|
       counter +=1
@@ -35,7 +35,7 @@ attr_accessor :name
 
   def self.list_genres
     counter = 0
-    self.all.collect do |genre|
+    self.all.each do |genre|
       counter +=1
       puts "#{counter}. #{genre.name}"
     end

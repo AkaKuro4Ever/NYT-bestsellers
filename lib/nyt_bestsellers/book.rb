@@ -13,15 +13,18 @@ attr_accessor :title, :author, :genre, :summary, :standing
     @@all << self
   end
 
-  def self.create_from_scraper(book)
-    book_instance = self.new(NytBestsellers::Genre.find_or_create_by_name(NytBestsellers::Scraper.new.genre_scraper))
-    book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
-    # book.genre = NytBestsellers::Genre.find_or_create_by_name(doc.css('h2.subcategory-heading a.subcategory-heading-link').text)
-    #IF the genre doesn't exist yet, we have to make it exist
-    book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
-    book_instance.summary = book.css('div.book-body p[itemprop="description"].description').text
-    book_instance.standing = book.css('div.book-body p.freshness').text
-    self.summary
+  def self.create_from_scraper(category)
+    # binding.pry
+    book_instance = self.new(NytBestsellers::Genre.find_or_create_by_name(category.css('h2.subcategory-heading a.subcategory-heading-link').text.strip))
+
+
+    category.css('li.trending').each do |book|
+      book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
+      book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
+      book_instance.summary = book.css('div.book-body p[itemprop="description"].description').text
+      book_instance.standing = book.css('div.book-body p.freshness').text
+      self.summary
+    end
   end
 
   def self.all

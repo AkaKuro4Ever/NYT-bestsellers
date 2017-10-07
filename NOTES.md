@@ -44,3 +44,15 @@ scraper.rb Notes:
   We could also make an array in the iteration and then put that iteration into the initialize method - this is what was done in student_scraper lab and music library CLI - we create from!
   This is WRONG - if we're giving attributes, we need to know which instance we're giving attributes to.
   #Each of these are not instantiated. First, we must iterate and instantiate each one
+
+
+Our ORIGINAL WORKING method
+def self.create_from_scraper(book)
+  # binding.pry
+  book_instance = self.new(NytBestsellers::Genre.find_or_create_by_name(book.css('h2.subcategory-heading a.subcategory-heading-link').text))
+  book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
+  book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
+  book_instance.summary = book.css('div.book-body p[itemprop="description"].description').text
+  book_instance.standing = book.css('div.book-body p.freshness').text
+  self.summary
+end
