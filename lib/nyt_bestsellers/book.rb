@@ -7,19 +7,18 @@ attr_accessor :title, :author, :genre, :summary, :standing
 
 @@all = [] #array of all Book instances
 
-  def initialize(genre)
+  def initialize(title, genre)
+    @title = title
     @genre = genre
     genre.books << self
     @@all << self
   end
 
   def self.create_from_scraper(category)
-    # binding.pry
-    book_instance = self.new(NytBestsellers::Genre.find_or_create_by_name(category.css('h2.subcategory-heading a.subcategory-heading-link').text.strip))
-
-
+    binding.pry
     category.css('li.trending').each do |book|
-      book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
+      book_instance = self.new(book.css('div.book-body h3.title[itemprop="name"]').text, NytBestsellers::Genre.find_or_create_by_name(category.css('h2.subcategory-heading a.subcategory-heading-link').text.strip))
+      # book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
       book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
       book_instance.summary = book.css('div.book-body p[itemprop="description"].description').text
       book_instance.standing = book.css('div.book-body p.freshness').text

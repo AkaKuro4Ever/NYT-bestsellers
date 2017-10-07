@@ -6,6 +6,7 @@ class NytBestsellers::Scraper
     doc = Nokogiri::HTML(open("https://www.nytimes.com/books/best-sellers/"))
   end
 
+#   ORIGINAL
 #   def homepage_iteration
 #     doc = scrape_homepage
 #     doc.css('li.trending').each do |book|
