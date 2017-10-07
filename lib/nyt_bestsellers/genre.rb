@@ -32,15 +32,6 @@ attr_accessor :name
       puts "#{counter}. #{book.title}"
     end
   end
-
-  def self.list_genres
-    counter = 0
-    self.all.each do |genre|
-      counter +=1
-      puts "#{counter}. #{genre.name}"
-    end
-    #it will compare the input to the genre.name and produce that genre's books
-  end
 end
 
 counter = 0

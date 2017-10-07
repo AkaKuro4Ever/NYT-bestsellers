@@ -45,9 +45,8 @@ class NytBestsellers::CLI
     ask_about_book
   end
 
-  def ask_about_genre
-    NytBestsellers::Genre.list_genres
-    puts "Which genre would you like to search through?"
+  def ask_about_book
+    puts "If you'd like to learn more about a specific book, please type in that book's title."
     puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
     puts "If you'd like to finish your search, type in 'Exit'."
     input = gets.strip
@@ -57,20 +56,51 @@ class NytBestsellers::CLI
       when "Exit"
         exit
       else
-        genre_lists_books(input)
+        check_book(input)
     end
   end
 
-  def genre_lists_books(input)
-    binding.pry
-    NytBestsellers::Genre.all.each do |genre|
-      if genre.name == input
-      NytBestsellers::Genre.list_genres_books
-      ask_about_book
-      else
-        puts "It seems the genre you searched is not on the list. Please type in another genre on the list"
-        NytBestsellers::Genre.list_genres
+  def check_book(input)
+    counter = 0
+    NytBestsellers::Book.all.each do |book|
+      if book.title != input
+        counter += 1
       end
+    end
+    if counter == 25
+      puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+      list_books
+    else
+      book_description(input)
+    end
+  end
+
+  def book_description(input)
+    NytBestsellers::Book.all.each do |book|
+      if book.title == input
+      puts <<-HEREDOC
+      #{book.title}
+      #{book.author}
+      #{book.genre.name}
+      Summary: #{book.summary}
+      Weeks On The List: #{book.standing}
+      HEREDOC
+      another_book
+      end
+    end
+  end
+
+  def another_book
+    puts "Would you like to learn about another book? Type 'Yes' or 'No'."
+    input = gets.strip
+    case input
+    when "Yes"
+      ask_about_book
+    when "No"
+      exit
+    else
+      puts "Sorry, I didn't understand that."
+      list_books
     end
   end
 
@@ -130,6 +160,55 @@ class NytBestsellers::CLI
     else
       puts "Sorry, I didn't understand that."
       list_books
+    end
+  end
+
+  def list_genres
+    counter = 0
+    NytBestsellers::Genre.all.each do |genre|
+      counter +=1
+      puts "#{counter}. #{genre.name}"
+    end
+  end
+
+  def ask_about_genre
+    NytBestsellers::Genre.list_genres
+    puts "Which genre would you like to search through?"
+    puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
+    puts "If you'd like to finish your search, type in 'Exit'."
+    input = gets.strip
+    case input
+      when "Main Menu"
+        call
+      when "Exit"
+        exit
+      else
+        check_genre(input)
+    end
+  end
+
+  def check_genre(input)
+    counter = 0
+    NytBestsellers::Genre.all.each do |genre|
+      if book.title != input
+        counter += 1
+      end
+    end
+    if counter == 5
+      puts "It seems the genre you searched is not on the list. Please type in another genre on the list:"
+      list_genres
+    else
+      genre_lists_books(input)
+    end
+  end
+
+  def genre_lists_books(input)
+    binding.pry
+    NytBestsellers::Genre.all.each do |genre|
+      if genre.name == input
+      NytBestsellers::Genre.list_genres_books
+      ask_about_book
+      end
     end
   end
 end
