@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
 require './lib/nyt_bestsellers'
-NytBestsellers::CLI.new.call
+NytBestsellers::CLI.new.run

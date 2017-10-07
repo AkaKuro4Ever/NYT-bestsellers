@@ -4,8 +4,12 @@ class NytBestsellers::CLI
 
 #at the end, must add in fancy stuff to make it look good! Look at student_scraper lab for help
 
-  def call
+  def run
     NytBestsellers::Scraper.new.homepage_iteration
+    call
+  end
+
+  def call
     # binding.pry
     puts "Main Menu"
     puts "Welcome to the New York Times Bestsellers List!"
@@ -39,8 +43,6 @@ class NytBestsellers::CLI
   end
 
   def list_books
-    #eventually will list all books
-    #A list of all NYT books will be here
     NytBestsellers::Book.book_list
     ask_about_book
   end
@@ -75,6 +77,26 @@ class NytBestsellers::CLI
     end
   end
 
+
+  # def check_book(input)
+  #   counter = 0
+  #   NytBestsellers::Book.all.each do |book|
+  #     if book.title != input
+  #       book_description(input)
+  #     else
+  #       puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+  #       list_books
+  #     end
+    # end
+    # if counter == 25
+    #   puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+    #   list_books
+    # else
+    #   book_description(input)
+      #THIS IS BREAKING BECAUSE OF THE COUNTER BEING WRONG?
+  #   end
+  # end
+
   def book_description(input)
     NytBestsellers::Book.all.each do |book|
       if book.title == input
@@ -95,7 +117,7 @@ class NytBestsellers::CLI
     input = gets.strip
     case input
     when "Yes"
-      ask_about_book
+      list_books
     when "No"
       exit
     else
@@ -133,35 +155,36 @@ class NytBestsellers::CLI
       book_description(input)
     end
   end
-
-  def book_description(input)
-    NytBestsellers::Book.all.each do |book|
-      if book.title == input
-      puts <<-HEREDOC
-      #{book.title}
-      #{book.author}
-      #{book.genre.name}
-      Summary: #{book.summary}
-      Weeks On The List: #{book.standing}
-      HEREDOC
-      another_book
-      end
-    end
-  end
-
-  def another_book
-    puts "Would you like to learn about another book? Type 'Yes' or 'No'."
-    input = gets.strip
-    case input
-    when "Yes"
-      ask_about_book
-    when "No"
-      exit
-    else
-      puts "Sorry, I didn't understand that."
-      list_books
-    end
-  end
+  #
+  # def book_description(input)
+  #   NytBestsellers::Book.all.each do |book|
+  #     case input
+  #     when book.title == input
+  #     puts <<-HEREDOC
+  #     #{book.title}
+  #     #{book.author}
+  #     #{book.genre.name}
+  #     Summary: #{book.summary}
+  #     Weeks On The List: #{book.standing}
+  #     HEREDOC
+  #     another_book
+  #     end
+  #   end
+  # end
+  #
+  # def another_book
+  #   puts "Would you like to learn about another book? Type 'Yes' or 'No'."
+  #   input = gets.strip
+  #   case input
+  #   when "Yes"
+  #     list_books
+  #   when "No"
+  #     exit
+  #   else
+  #     puts "Sorry, I didn't understand that."
+  #     list_books
+  #   end
+  # end
 
   def list_genres
     counter = 0

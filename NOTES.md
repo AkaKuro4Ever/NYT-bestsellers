@@ -56,3 +56,19 @@ def self.create_from_scraper(book)
   book_instance.standing = book.css('div.book-body p.freshness').text
   self.summary
 end
+
+
+def check_book(input)
+  counter = 0
+  NytBestsellers::Book.all.each do |book|
+    if book.title != input  
+      counter += 1
+    end
+  end
+  if counter == 25
+    puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+    list_books
+  else
+    book_description(input)
+  end
+end
