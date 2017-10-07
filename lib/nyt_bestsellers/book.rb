@@ -14,8 +14,9 @@ attr_accessor :title, :author, :genre, :summary, :standing
     @@all << self
   end
 
+#Current problem: First time works for any of the 5 categories. However, with every new input into the CLI, they will duplicate the list once, so it's 2X then 3X, etc no matter which list you are now applying.
+
   def self.create_from_scraper(category)
-    binding.pry
     category.css('li.trending').each do |book|
       book_instance = self.new(book.css('div.book-body h3.title[itemprop="name"]').text, NytBestsellers::Genre.find_or_create_by_name(category.css('h2.subcategory-heading a.subcategory-heading-link').text.strip))
       # book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
