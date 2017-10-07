@@ -1,0 +1,173 @@
+=> [[32m#<NytBestsellers::Genre:0x000000019b2a98[0m
+  @books[32m=[0m
+   [[32m#<NytBestsellers::Book:0x000000019b2a48[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Stephen King and Owen King[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mIn a small Appalachian town, women who fall asleep don't wake up and become shrouded in mysterious cocoons while the men battle one another.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mSLEEPING BEAUTIES[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x000000019a50f0[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Harlan Coben[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mDet. Napoleon Dumas investigates a murder and uncovers clues about the disappearance of his high school love and the death of his twin brother 15 years ago.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mDON'T LET GO[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x000000019a2350[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Stephen King[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m8 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mThe fears of seven teenagers are rekindled in their adult lives by the terrifying title character. Originally published in 1986.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mIT[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x000000019975b8[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Ken Follett[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m3 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mThe lovers Ned Willard and Margery Fitzgerald find themselves on opposite sides of a conflict between English Catholics and Protestants while Queen Elizabeth fights to maintain her throne.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mA COLUMN OF FIRE[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001994840[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Nelson DeMille[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m2 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mA Miami lawyer solicits an Army veteran to go on a secret mission to recover $60 million stashed away in Cuba.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mTHE CUBAN AFFAIR[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x0000000198dc98[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Stephen King and Owen King[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mIn a small Appalachian town, women who fall asleep don't wake up and become shrouded in mysterious cocoons while the men battle one another.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mSLEEPING BEAUTIES[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001982eb0[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Harlan Coben[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mDet. Napoleon Dumas investigates a murder and uncovers clues about the disappearance of his high school love and the death of his twin brother 15 years ago.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mDON'T LET GO[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001976a70[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Ken Follett[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m3 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mThe lovers Ned Willard and Margery Fitzgerald find themselves on opposite sides of a conflict between English Catholics and Protestants while Queen Elizabeth fights to maintain her throne.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mA COLUMN OF FIRE[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001973b90[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Nelson DeMille[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m2 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mA Miami lawyer solicits an Army veteran to go on a secret mission to recover $60 million stashed away in Cuba.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mTHE CUBAN AFFAIR[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001971048[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby James Patterson and James O. Born[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m2 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mA detective from New York takes his family on a vacation in Maine and is enlisted by local cops to help solve a crime in the woods.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mHAUNTED[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001961eb8[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Bill O'Reilly and Martin Dugard[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m2 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mMajor events and battles during the Revolutionary War are told from the perspectives of George Washington, Benjamin Franklin and others.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mKILLING ENGLAND[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x000000019574b8[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Hillary Rodham Clinton[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m3 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mThe first woman nominated for president by a major political party details her campaign, mistakes she made, outside forces that affected the outcome and how she recovered in its aftermath.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mWHAT HAPPENED[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001954948[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Katy Tur[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m3 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mThe NBC News correspondent describes her work covering the 2016 campaign of the Republican nominee for president and his behavior toward her.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mUNBELIEVABLE[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x0000000194dbc0[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Satya Nadella with Greg Shaw and Jill Tracie Nichols[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mMicrosoft's chief executive discusses changes at the company, advancements in technology and the importance of empathy.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mHIT REFRESH[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x0000000194ab78[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Neil deGrasse Tyson[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m22 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mA straightforward, easy-to-understand introduction to the laws that govern the universe.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mASTROPHYSICS FOR PEOPLE IN A HURRY[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x0000000193fb60[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Bill O'Reilly and Martin Dugard[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m2 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mMajor events and battles during the Revolutionary War are told from the perspectives of George Washington, Benjamin Franklin and others.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mKILLING ENGLAND[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x0000000193e440[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Hillary Rodham Clinton[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m3 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mThe first woman nominated for president by a major political party details her campaign, mistakes she made, outside forces that affected the outcome and how she recovered in its aftermath.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mWHAT HAPPENED[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x0000000192b390[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Katy Tur[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m3 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mThe NBC News correspondent describes her work covering the 2016 campaign of the Republican nominee for president and his behavior toward her.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mUNBELIEVABLE[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x000000019231e0[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Neil deGrasse Tyson[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m22 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mA straightforward, easy-to-understand introduction to the universe.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mASTROPHYSICS FOR PEOPLE IN A HURRY[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001920440[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Satya Nadella with Greg Shaw and Jill Tracie Nichols[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+     @summary[32m=[0m
+      [31m[1;31m"[0m[31mMicrosoft's chief executive discusses changes at the company, advancements in technology and the importance of empathy.[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mHIT REFRESH[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001915450[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Jeannette Walls[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m393 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m[31m[1;31m"[0m[31mNot Applicable[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mTHE GLASS CASTLE[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x0000000190e880[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Atul Gawande[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m4 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m[31m[1;31m"[0m[31mNot Applicable[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mBEING MORTAL[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001903cf0[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Timothy Snyder[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m31 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m[31m[1;31m"[0m[31mNot Applicable[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mON TYRANNY[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x00000001901130[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Douglas Preston[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m4 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m[31m[1;31m"[0m[31mNot Applicable[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mTHE LOST CITY OF THE MONKEY GOD[1;31m"[0m[31m[0m[32m>[0m,
+    [32m#<NytBestsellers::Book:0x000000018fa678[0m
+     @author[32m=[0m[31m[1;31m"[0m[31mby Bryan Stevenson[1;31m"[0m[31m[0m,
+     @genre[32m=[0m[32m#<NytBestsellers::Genre:0x000000019b2a98[0m ...[32m>[0m,
+     @standing[32m=[0m[31m[1;31m"[0m[31m80 weeks on the list[1;31m"[0m[31m[0m,
+     @summary[32m=[0m[31m[1;31m"[0m[31mNot Applicable[1;31m"[0m[31m[0m,
+     @title[32m=[0m[31m[1;31m"[0m[31mJUST MERCY[1;31m"[0m[31m[0m[32m>[0m],
+  @name[32m=[0m[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m[32m>[0m]

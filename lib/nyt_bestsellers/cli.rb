@@ -46,6 +46,7 @@ class NytBestsellers::CLI
   end
 
   def ask_about_genre
+    binding.pry
     NytBestsellers::Genre.list_genres
     puts "Which genre would you like to search through?"
     puts "If you'd like to go back to the main menu, please type in 'Main Menu'."

@@ -14,7 +14,7 @@ attr_accessor :title, :author, :genre, :summary, :standing
   end
 
   def self.create_from_scraper(book)
-    book_instance = self.new(NytBestsellers::Genre.find_or_create_by_name(book.css('h2.subcategory-heading a.subcategory-heading-link').text))
+    book_instance = self.new(NytBestsellers::Genre.find_or_create_by_name(NytBestsellers::Scraper.new.genre_scraper))
     book_instance.title = book.css('div.book-body h3.title[itemprop="name"]').text
     # book.genre = NytBestsellers::Genre.find_or_create_by_name(doc.css('h2.subcategory-heading a.subcategory-heading-link').text)
     #IF the genre doesn't exist yet, we have to make it exist

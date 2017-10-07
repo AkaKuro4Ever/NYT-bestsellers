@@ -42,3 +42,9 @@ attr_accessor :name
     #it will compare the input to the genre.name and produce that genre's books
   end
 end
+
+counter = 0
+NytBestsellers::Genre.all.collect do |genre|
+  counter +=1
+  puts "#{counter}. #{genre.name}"
+end
