@@ -1,8 +1,6 @@
 # NytBestsellers
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nyt_bestsellers`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the New York Times Bestsellers Ruby gem! In this gem, you will be able to find out the top 5 books from 5 genres on the NYT Bestsellers list, as shown on their homepage. Please enjoy yourself and have a great time. 
 
 ## Installation
 
