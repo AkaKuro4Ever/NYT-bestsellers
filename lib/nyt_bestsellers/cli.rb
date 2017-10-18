@@ -80,8 +80,7 @@ end
       end
     else
       puts "Please enter a number that is in range."
-      input = gets.strip
-      check_book(input)
+      ask_about_book
     end
   end
 
@@ -187,7 +186,7 @@ end
     else
       puts "Please enter a number that is in range."
       input = gets.strip
-      check_book(input)
+      ask_about_book
     end
   end
 end
