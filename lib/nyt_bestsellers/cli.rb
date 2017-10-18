@@ -22,18 +22,13 @@ class NytBestsellers::CLI
 
   def menu
     input = gets.strip
-    case input
-    when "View All Books"
+
+    if input.downcase ==  "View All Books".downcase
       list_books
-    when "View All books"
-      list_books
-    when "View all books"
-      list_books
-    when "view all books"
-      list_books
-    when "Genre"
+      ask_about_book
+    elsif input.downcase == "GENRE".downcase
       ask_about_genre
-    when "Exit"
+    elsif input.downcase == "Exit".downcase
       exit
     else
       puts "That is an invalid option. Please type in 'Genre' or 'View All Books'."
@@ -43,19 +38,31 @@ class NytBestsellers::CLI
   end
 
   def list_books
-    NytBestsellers::Book.book_list
-    ask_about_book
-  end
+    NytBestsellers::Book.all.each.with_index(1) do |book, i|
+      puts "#{i}. #{book.title}"
+    end
+end
+#cnt+cmd+downkey/upkey - moving lines :D
+  # def self.book_list
+  #   counter = 0
+  #   self.all.collect do |book|
+  #     counter +=1
+  #     puts "#{counter}. #{book.title}"
+  #   end
+  # end
 
   def ask_about_book
-    puts "If you'd like to learn more about a specific book, please type in that book's title."
+    puts "If you'd like to see the list again, please type in 'List'"
+    puts "If you'd like to learn more about a specific book, please type in that book's number."
     puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
     puts "If you'd like to finish your search, type in 'Exit'."
     input = gets.strip
-    case input
-      when "Main Menu"
+    if input.downcase == "Main Menu".downcase
         call
-      when "Exit"
+    elsif input.downcase == "List".downcase
+      list_books
+      ask_about_book
+    elsif input.downcase == "Exit".downcase
         exit
       else
         check_book(input)
@@ -63,46 +70,42 @@ class NytBestsellers::CLI
   end
 
   def check_book(input)
-    counter = 0
-    NytBestsellers::Book.all.each do |book|
-      if book.title != input
-        counter += 1
+    if input.to_i.between?(1, NytBestsellers::Book.all.count)
+      book = NytBestsellers::Book.all[input.to_i - 1]
+      if book == nil
+        puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+        ask_about_book
+      else
+        book_description(book)
       end
-    end
-    if counter == NytBestsellers::Book.all.count
-      puts "It seems the book you searched is not on the list. Please type in another book on the list:"
-      list_books
     else
-      book_description(input)
+      puts "Please enter a number that is in range."
+      input = gets.strip
+      check_book(input)
     end
   end
 
-  def book_description(input)
-    NytBestsellers::Book.all.each do |book|
-      if book.title == input
+  def book_description(book)
       puts <<-HEREDOC
       #{book.title}
       #{book.author}
       #{book.genre.name}
-      Summary: #{book.summary}
+      Summary: #{book.summary == ""? "Not Applicable" : book.summary }
       Weeks On The List: #{book.standing}
       HEREDOC
       another_book
-      end
-    end
   end
 
   def another_book
     puts "Would you like to learn about another book? Type 'Yes' or 'No'."
     input = gets.strip
-    case input
-    when "Yes"
-      list_books
-    when "No"
+    if input.downcase == "Yes".downcase
+      ask_about_book
+    elsif input.downcase == "No".downcase
       exit
     else
       puts "Sorry, I didn't understand that."
-      list_books
+      ask_about_book
     end
   end
 
@@ -116,41 +119,75 @@ class NytBestsellers::CLI
 
   def ask_about_genre
     list_genres
-    puts "Which genre would you like to search through?"
+    puts "Which genre would you like to search through? Please type in the number of the genre."
     puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
     puts "If you'd like to finish your search, type in 'Exit'."
     input = gets.strip
-    case input
-      when "Main Menu"
+    if input.downcase == "Main Menu".downcase
         call
-      when "Exit"
+    elsif input.downcase == "Exit".downcase
         exit
-      else
-        check_genre(input)
+    else
+      check_genre(input)
     end
   end
 
   def check_genre(input)
-    counter = 0
-    NytBestsellers::Genre.all.each do |genre|
-      if genre.name != input
-        counter += 1
+    if input.to_i.between?(1, NytBestsellers::Genre.all.count)
+      genre = NytBestsellers::Genre.all[input.to_i - 1]
+      if genre == nil
+        puts "It seems the genre you searched is not on the list. Please type in another genre on the list:"
+        ask_about_genre
+      else
+        genre_lists_books(genre)
       end
-    end
-    if counter == 5
-      puts "It seems the genre you searched is not on the list. Please type in another genre on the list:"
-      ask_about_genre
     else
-      genre_lists_books(input)
+      puts "Please enter a number that is in range."
+      input = gets.strip
+      check_genre(input)
     end
   end
 
-  def genre_lists_books(input)
-    NytBestsellers::Genre.all.each do |genre|
-      if genre.name == input
-      genre.list_genres_books
-      ask_about_book
+  def genre_lists_books(genre)
+    NytBestsellers::Genre.all.each do |a_genre|
+      if a_genre.name == genre.name
+      a_genre.list_genres_books
+      ask_about_book_from_genre(genre)
       end
+    end
+  end
+
+  def ask_about_book_from_genre(genre)
+    puts "If you'd like to see the list again, please type in 'List'"
+    puts "If you'd like to learn more about a specific book, please type in that book's number."
+    puts "If you'd like to go back to the main menu, please type in 'Main Menu'."
+    puts "If you'd like to finish your search, type in 'Exit'."
+    input = gets.strip
+    if input.downcase == "Main Menu".downcase
+        call
+    elsif input.downcase == "List".downcase
+      list_books
+      ask_about_book
+    elsif input.downcase == "Exit".downcase
+        exit
+      else
+        check_book_from_genre(input, genre)
+    end
+  end
+
+  def check_book_from_genre(input, genre)
+    if input.to_i.between?(1, NytBestsellers::Genre.book_number_in_genre(genre))
+      book = NytBestsellers::Genre.book_in_genre(genre)[input.to_i - 1]
+      if book == nil
+        puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+        ask_about_book
+      else
+        book_description(book)
+      end
+    else
+      puts "Please enter a number that is in range."
+      input = gets.strip
+      check_book(input)
     end
   end
 end

@@ -1,0 +1,38 @@
+=> [32m#<NytBestsellers::Genre:0x00000001944ac0[0m
+ @books[32m=[0m
+  [[32m#<NytBestsellers::Book:0x00000001944a70[0m
+    @author[32m=[0m[31m[1;31m"[0m[31mby Bill O'Reilly and Martin Dugard[1;31m"[0m[31m[0m,
+    @genre[32m=[0m[32m#<NytBestsellers::Genre:0x00000001944ac0[0m ...[32m>[0m,
+    @standing[32m=[0m[31m[1;31m"[0m[31m3 weeks on the list[1;31m"[0m[31m[0m,
+    @summary[32m=[0m
+     [31m[1;31m"[0m[31mMajor events and battles during the Revolutionary War are told from several perspectives.[1;31m"[0m[31m[0m,
+    @title[32m=[0m[31m[1;31m"[0m[31mKILLING ENGLAND[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<NytBestsellers::Book:0x0000000193e198[0m
+    @author[32m=[0m[31m[1;31m"[0m[31mby Ta-Nehisi Coates[1;31m"[0m[31m[0m,
+    @genre[32m=[0m[32m#<NytBestsellers::Genre:0x00000001944ac0[0m ...[32m>[0m,
+    @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+    @summary[32m=[0m
+     [31m[1;31m"[0m[31mA series of essays that cover each year of the Obama administration, the writer's own journey and the echoes of American history in modern times.[1;31m"[0m[31m[0m,
+    @title[32m=[0m[31m[1;31m"[0m[31mWE WERE EIGHT YEARS IN POWER[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<NytBestsellers::Book:0x0000000193b808[0m
+    @author[32m=[0m[31m[1;31m"[0m[31mby Hillary Rodham Clinton[1;31m"[0m[31m[0m,
+    @genre[32m=[0m[32m#<NytBestsellers::Genre:0x00000001944ac0[0m ...[32m>[0m,
+    @standing[32m=[0m[31m[1;31m"[0m[31m4 weeks on the list[1;31m"[0m[31m[0m,
+    @summary[32m=[0m
+     [31m[1;31m"[0m[31mAn inside look at her campaign, mistakes she made, outside forces that affected the outcome and how she recovered in its aftermath.[1;31m"[0m[31m[0m,
+    @title[32m=[0m[31m[1;31m"[0m[31mWHAT HAPPENED[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<NytBestsellers::Book:0x00000001937c58[0m
+    @author[32m=[0m[31m[1;31m"[0m[31mby Neil deGrasse Tyson[1;31m"[0m[31m[0m,
+    @genre[32m=[0m[32m#<NytBestsellers::Genre:0x00000001944ac0[0m ...[32m>[0m,
+    @standing[32m=[0m[31m[1;31m"[0m[31m23 weeks on the list[1;31m"[0m[31m[0m,
+    @summary[32m=[0m
+     [31m[1;31m"[0m[31mA straightforward, easy-to-understand introduction to the universe.[1;31m"[0m[31m[0m,
+    @title[32m=[0m[31m[1;31m"[0m[31mASTROPHYSICS FOR PEOPLE IN A HURRY[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<NytBestsellers::Book:0x000000019346c0[0m
+    @author[32m=[0m[31m[1;31m"[0m[31mby Scott Galloway[1;31m"[0m[31m[0m,
+    @genre[32m=[0m[32m#<NytBestsellers::Genre:0x00000001944ac0[0m ...[32m>[0m,
+    @standing[32m=[0m[31m[1;31m"[0m[31mNew this week[1;31m"[0m[31m[0m,
+    @summary[32m=[0m
+     [31m[1;31m"[0m[31mA study of Amazon, Apple, Facebook and Google, with suggestions on applying these companies' strategies to your own business or career.[1;31m"[0m[31m[0m,
+    @title[32m=[0m[31m[1;31m"[0m[31mTHE FOUR[1;31m"[0m[31m[0m[32m>[0m],
+ @name[32m=[0m[31m[1;31m"[0m[31mHardcover Nonfiction[1;31m"[0m[31m[0m[32m>[0m

@@ -32,10 +32,22 @@ attr_accessor :name
       puts "#{counter}. #{book.title}"
     end
   end
-end
 
-counter = 0
-NytBestsellers::Genre.all.collect do |genre|
-  counter +=1
-  puts "#{counter}. #{genre.name}"
+  def self.book_number_in_genre(genre)
+    self.all.each do |a_genre|
+      if a_genre.name == genre.name
+      @count = a_genre.books.count
+      end
+    end
+    @count
+  end
+
+  def self.book_in_genre(genre)
+    self.all.each do |a_genre|
+      if a_genre.name == genre.name
+      @list = a_genre.books
+      end
+    end
+    @list
+  end
 end

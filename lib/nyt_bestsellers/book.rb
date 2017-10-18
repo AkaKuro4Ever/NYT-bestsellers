@@ -23,27 +23,26 @@ attr_accessor :title, :author, :genre, :summary, :standing
       book_instance.author = book.css('div.book-body p.author[itemprop="author"]').text
       book_instance.summary = book.css('div.book-body p[itemprop="description"].description').text
       book_instance.standing = book.css('div.book-body p.freshness').text
-      self.summary
     end
   end
 
   def self.all
     @@all
   end
-
-  def self.summary
-    self.all.each do |book|
-      if book.summary == ""
-        book.summary = "Not Applicable"
-      end
-    end
-  end
-
-  def self.book_list
-    counter = 0
-    self.all.collect do |book|
-      counter +=1
-      puts "#{counter}. #{book.title}"
-    end
-  end
 end
+
+# def check_book(input)
+#   if input.to_i.between?(1, NytBestsellers::Book.all.count)
+#     book = NytBestsellers::Book.all[input.to_i - 1]
+#     if book == nil
+#       puts "It seems the book you searched is not on the list. Please type in another book on the list:"
+#       ask_about_book
+#     else
+#       book_description(book)
+#     end
+#   else
+#     puts "Please enter a number that is in range."
+#     input = gets.strip
+#     check_genre(input)
+#   end
+# end

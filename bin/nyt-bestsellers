@@ -1,4 +1,11 @@
 #!/usr/bin/env ruby
+#shebang - ricky martin
 
-require './lib/nyt_bestsellers'
+#use require_relative for local files
+require_relative '../lib/nyt_bestsellers'
+
+#use require for gems
+#require 'pry'
+
+#module or namespace
 NytBestsellers::CLI.new.run
