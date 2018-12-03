@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type into the command line ```ruby bin/nyt-bestsellers``` in order to start it up
 
 ## Development
 
