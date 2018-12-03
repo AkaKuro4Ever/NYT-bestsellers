@@ -4,19 +4,7 @@ Welcome to the New York Times Bestsellers Ruby gem! In this gem, you will be abl
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'nyt_bestsellers'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install nyt_bestsellers
+Fork the project to your database
 
 ## Usage
 
